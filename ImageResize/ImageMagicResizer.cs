@@ -2,7 +2,7 @@
 
 namespace ImageResize
 {
-    public class ImageMagikResizer : IResizer
+    public class ImageMagikImageResizer : IImageResizer
     {
         public ResizeResult ResizeImage(ResizeRequest resizeRequest)
         {
@@ -18,7 +18,7 @@ namespace ImageResize
                 image.Format = MagickFormat.Jpg;
                 
                 var resizeResult = new ResizeResult();
-                image.Write(resizeResult.imageData);
+                image.Write(resizeResult.ImageData);
 
                 return resizeResult;
             }
